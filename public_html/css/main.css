@@ -146,6 +146,8 @@ a.button:hover, a.button:focus { background-color: #435b59; }
 .images { display: inline-block; padding: 0.5em 0.75em; }
 
 fieldset { padding: 0; border: none; }
+fieldset label { margin-bottom: .5em; }
+fieldset label:last-child { margin-bottom: 1em; }
 
 legend { margin-bottom: .5em; }
 
@@ -154,14 +156,9 @@ label strong { display: block; margin-bottom: .5em; }
 
 input[type='text'], textarea { display: block; width: 100%; max-width: 24em; margin-bottom: 1em; border: 1px solid #AAA; padding: .25em .4em; }
 
-fieldset label { margin-bottom: .5em; }
-fieldset label:last-child { margin-bottom: 1em; }
-
 input[type='radio'] { margin-right: .5em; }
 
-textarea { display: block; }
-
-select { display: block; }
+select { display: block; margin-bottom: 1em; }
 
 nav a:first-of-type { margin-left: 20em; }
 

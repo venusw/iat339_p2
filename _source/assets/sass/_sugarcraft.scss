@@ -63,6 +63,16 @@ a.button:hover, a.button:focus {
 fieldset {
   padding: 0;
   border: none; 
+
+  label {
+    margin-bottom: .5em;
+
+    &:last-child {
+      margin-bottom: 1em;
+    }
+
+  }
+
 }
 
 legend {
@@ -89,25 +99,13 @@ input[type='text'], textarea {
   padding: .25em .4em;
 }
 
-fieldset label {
-  margin-bottom: .5em;
-
-  &:last-child {
-    margin-bottom: 1em;
-  }
-
-}
-
 input[type='radio'] {
   margin-right: .5em;
 }
 
-textarea {
-  display: block;
-}
-
 select {
   display: block;
+  margin-bottom: 1em;
 }
 
 // NAV
