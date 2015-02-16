@@ -134,7 +134,7 @@ section h3 { margin-bottom: 0; }
 
 section p { margin-top: 0; }
 
-section code { background-color: #EEE; padding: 0.5em 0.75em; }
+code, pre { display: block; background-color: #EEE; padding: 0.5em 0.75em; margin: 0; margin-bottom: 1em; }
 
 a.h1 { display: inline-block; color: #a6862e; text-decoration: none; -webkit-transition: background-color 0.5s ease-out; transition: background-color 0.5s ease-out; }
 
