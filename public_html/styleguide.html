@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Style Guide Template</title>
-    <link href="css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
   </head>
   <body>
@@ -61,23 +61,52 @@
     </section>
 
 <section id="form">
-      <h2>Default Form Style</h2>
-      <h3>CSS selector:</h3>
-      <p>'div.form'</p>
-      <h3>Sample code:</h3>
-      <code>
-        &lt;div class="input-wrapper" href="#"&gt;
-        &lt;label for="form-subject">SUBJECT: &lt;/label&gt;
-        &lt;input type="text" id="form-subject" placeholder="Example Comment"&gt;
+      <h2>Form Elements</h2>
+      <h3>Text Field</h3>
+      <h4>Example</h4>
+      <label><strong>Name</strong> <input type="text" name="text-field"></label>
+      <code>&lt;label&gt;&lt;strong&gt;Name&lt;/strong&gt;&lt;input type="text" name="text-field"&gt;&lt;/label&gt;
       </code>
-      <h3>Rendered element:</h3>
-      <div class="form" href="#">
-        <label for="form-subject">SUBJECT: </label>
-        <input type="text" id="form-subject" placeholder="Example Comment">
-      </div>
+
+      <h3>Text Area</h3>
+      <h4>Example</h4>
+      <label><strong>Comment</strong>
+        <textarea name='text-area'></textarea>
+      </label>
+      <code>&lt;label&gt;&lt;strong&gt;Comment&lt;/strong&gt;&lt;textarea name='text-area'&gt;&lt;/textarea&gt;&lt;/label&gt;
+      </code>
+      
+      <h3>Radio Group</h3>
+      <h4>Example</h4>
+      <fieldset>
+        <legend><strong>Flavour 1</strong></legend>
+        <label><input type='radio' name='radio-group'>Macha Frappe</label>
+        <label><input type='radio' name='radio-group'>Earl Grey</label>
+        <label><input type='radio' name='radio-group'>Vanilla Bean</label>
+        <label><input type='radio' name='radio-group'>Dark Mocha</label>
+      </fieldset>
+      <code>&lt;fieldset&gt;
+        &lt;legend&gt;&lt;strong&gt;Flavour 1&lt;/strong&gt;&lt;/legend&gt;
+        &lt;label&gt;&lt;input type='radio' name='radio-group'&gt;Macha Frappe&lt;/label&gt;
+        &lt;label&gt;&lt;input type='radio' name='radio-group'&gt;Earl Grey&lt;/label&gt;
+        &lt;label&gt;&lt;input type='radio' name='radio-group'&gt;Vanilla Bean&lt;/label&gt;
+        &lt;label&gt;&lt;input type='radio' name='radio-group'&gt;Dark Mocha&lt;/label&gt;
+      &lt;/fieldset&gt;
+      </code>
+
+
+      <h3>Dropdown</h3>
+      <h4>Example</h4>
+      <label name='drop-down'>
+        <strong>Quantity</strong>
+        <select> 
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </label>   
+
     </section>
-
-
 
   </body>
 </html>
