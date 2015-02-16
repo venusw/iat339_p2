@@ -1,3 +1,9 @@
+// GENERAL
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   padding: 2rem;
@@ -52,13 +58,59 @@ a.button:hover, a.button:focus {
 }
 
 
-label {
-  margin-right: 0.5em;
-  display: inline;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+// FORM
+
+fieldset {
+  padding: 0;
+  border: none; 
 }
 
+legend {
+  margin-bottom: .5em;
+}
+
+label {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+
+  strong {
+    display: block;
+    margin-bottom: .5em;
+  }
+
+}
+
+input[type='text'], textarea {
+  display: block;
+  width: 100%;
+  max-width: 24em;
+  margin-bottom: 1em;
+  border: 1px solid #AAA;
+  padding: .25em .4em;
+}
+
+fieldset label {
+  margin-bottom: .5em;
+
+  &:last-child {
+    margin-bottom: 1em;
+  }
+
+}
+
+input[type='radio'] {
+  margin-right: .5em;
+}
+
+textarea {
+  display: block;
+}
+
+select {
+  display: block;
+}
+
+// NAV
 
 nav a:first-of-type {
   margin-left: 20em;
