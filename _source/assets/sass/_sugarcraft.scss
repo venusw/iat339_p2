@@ -118,23 +118,62 @@ select {
 
 // NAV
 
-nav a:first-of-type {
-  margin-left: 20em;
-}
-nav a {
-  display: inline-block;
-  color: #999999;
-  background-color: #ffffff;
-  font-size:1.5rem;
-  padding: 0.5em 0.75em; /* top right bottom left*/ 
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+// nav a:first-of-type {
+//   margin-left: 20em;
+// }
+// nav a {
+//   display: inline-block;
+//   color: #999999;
+//   background-color: #ffffff;
+//   font-size:1.5rem;
+//   padding: 0.5em 0.75em; /* top right bottom left*/ 
+//   text-decoration: none;
+//   font-family: 'Open Sans', sans-serif;
+//   font-weight: 300;
 
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
+//   -webkit-transition: background-color 0.5s;
+//   transition: background-color 0.5s;
+// }
 
-nav a:hover, nav a:focus {
-  color: #3ca39b;
+// nav a:hover, nav a:focus {
+//   color: #3ca39b;
+// }
+
+
+header {
+  border: 1px solid #CCC;
+
+  #logo {
+    float: left;
+  }
+
+  img {
+    max-width: 50px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    flex-grow: 1;
+    list-style: none;
+    max-width: 8em;
+    border: none;
+  }
+
+  a {
+    display: block;
+    padding: 1em 0;
+    text-align: center;
+    background: #AAA;
+  }
+
 }
