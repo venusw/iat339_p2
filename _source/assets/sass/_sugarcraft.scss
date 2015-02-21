@@ -61,11 +61,45 @@ a.button:hover, a.button:focus {
   background-color: #435b59;
 }
 
+// IMAGES
+.image {
+  width: 100%;
+}
 .images {
   display: inline-block;
-  padding: 0.5em 0.75em;
+  padding: 0.5em 0.5em;
 
 }
+
+figure { 
+  display: inline-block;
+  padding: 4em 0em 5em 0em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-gallery a {
+  display: inline-block;
+  max-width: 400px;
+  padding: 2em 1em 1em 1em;
+
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+ -moz-transition: opacity .25s ease-in-out;
+ -webkit-transition: opacity .25s ease-in-out;
+}
+
+.image-gallery a:focus, .image-gallery a:hover {
+    opacity:0.8;
+}
+
+  figcaption { 
+      display: block;
+      font-size: 1.3em;
+      color: black;
+      text-transform: uppercase;
+      text-align: center;
+  }
 
 
 // FORM
@@ -117,29 +151,6 @@ select {
   display: block;
   margin-bottom: 1em;
 }
-
-// NAV
-
-// nav a:first-of-type {
-//   margin-left: 20em;
-// }
-// nav a {
-//   display: inline-block;
-//   color: #999999;
-//   background-color: #ffffff;
-//   font-size:1.5rem;
-//   padding: 0.5em 0.75em; /* top right bottom left*/ 
-//   text-decoration: none;
-//   font-family: 'Open Sans', sans-serif;
-//   font-weight: 300;
-
-//   -webkit-transition: background-color 0.5s;
-//   transition: background-color 0.5s;
-// }
-
-// nav a:hover, nav a:focus {
-//   color: #3ca39b;
-// }
 
 
 header {
