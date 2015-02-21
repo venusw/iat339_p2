@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Style Guide Template</title>
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
   </head>
   <body>
@@ -19,35 +19,19 @@
    </figure>
    </section>
 
-<section id="nav-bar">
-      <h2>Default Nav Bar Style</h2>
+<section id="htext">
+      <h2>Header Text</h2>
       <h3>CSS selector:</h3>
-      <p>'a.nav-bar'</p>
+      <p>'a.htext'</p>
       <h3>Sample code:</h3>
-      <code> &lt;a class="nav-bar" href="#"&gt;
- &lt;nav&gt;
-      &lt;a href="#products">PRODUCTS&lt;/a&gt;
-      &lt;a href="#contact">CONTACT&lt;/a&gt;
- &lt;/nav&gt;
-      </code>
+      <code>&lt;a href="#" class="htext"&gt;Default Header Text&lt;/a&gt;</code>
       <h3>Rendered element:</h3>
-      <a class="nav-bar" href="#">
- <nav> 
-      <a href="#products">PRODUCTS</a>
-      <a href="#contact">CONTACT</a>
- </nav>
-
-    </section>
-
-<section id="H1">
-      <h2>H1 Text</h2>
-      <h3>CSS selector:</h3>
-      <p>'a.h1'</p>
-      <h3>Sample code:</h3>
-      <code>&lt;a href="#" class="h1"&gt;Default H1 Text&lt;/a&gt;</code>
-      <h3>Rendered element:</h3>
-      <a class="h1" href="#"><h1>Default H1 Text<h1>
+      <a class="htext" href="#">
+       <h1>Default Header Text<h1>
       </a>
+      <h2>Default H2 Text</h2>
+      <h3>Default H3 Text</h3>
+      <h4>Default H4 Text</h4>
     </section>
 
 <section id="buttons">
@@ -80,7 +64,7 @@
       <h4>Example</h4>
       <fieldset>
         <legend><strong>Flavour 1</strong></legend>
-        <label><input type='radio' name='radio-group'>Macha Frappe</label>
+        <label><input type='radio' name='radio-group'>Matcha Frappe</label>
         <label><input type='radio' name='radio-group'>Earl Grey</label>
         <label><input type='radio' name='radio-group'>Vanilla Bean</label>
         <label><input type='radio' name='radio-group'>Dark Mocha</label>
@@ -115,9 +99,9 @@
     </section>
 
 
-    <h3>Header</h3>
+    <h3>Heading</h3>
     <header>
-      <div id='logo'><img src='/image/sugar-logo.jpeg' alt='logo'></div>
+      <div id='logo'><img src='image/sugar-logo.jpeg' alt='logo'></div>
       <nav>
         <ul>
           <li><a href='#'>Home</a></li>
@@ -126,6 +110,11 @@
         </ul>
       </nav>
     </header>
+
+    <h3>Footer</h3>
+    <footer>
+      Copyright © SugarCraft 2015
+    </footer>
 
   </body>
 </html>

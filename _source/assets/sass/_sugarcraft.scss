@@ -35,16 +35,16 @@ code, pre {
   margin-bottom: 1em;
 }
 
-a.h1 {
-  display: inline-block;
+a.htext {
   color: #a6862e;
   text-decoration: none;
-  -webkit-transition: background-color 0.5s ease-out;
-  transition: background-color 0.5s ease-out;
+  // -webkit-transition: background-color 0.5s ease-out;
+  // transition: background-color 0.5s ease-out;
 }
-/*a.h1:hover, a.h1:focus {
-  color: #666666;
-  }*/
+
+// a.htext:hover, a.htext:focus {
+//   color: #666666;
+//   }
 
 
 a.button {
@@ -143,7 +143,7 @@ select {
 
 
 header {
-  border: 1px solid #CCC;
+  border: 0px solid #CCC;
 
   #logo {
     float: left;
@@ -174,8 +174,29 @@ header {
   a {
     display: block;
     padding: 1em 0;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
     text-align: center;
-    background: #AAA;
-  }
+    background: #fff;
 
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
 }
+
+  nav a:hover, nav a:focus {
+  color: #3ca39b;
+  }
+}
+
+  footer {
+    background-color: #ffffff;
+    font-size:.8rem;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color:#666;
+    text-align:center;
+    padding:10px;
+
+  }
