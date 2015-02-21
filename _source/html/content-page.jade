@@ -1,0 +1,18 @@
+//- example content page
+
+extends _base-template.jade
+
+block current-page
+	//- sets the active page in the main navigation
+	- var products = true
+
+mixin page_title
+	| Page title goes here
+
+block title
+	title Sugar Craft – 
+		+page_title
+
+block content
+	//- content goes here
+	p This is my Products.
