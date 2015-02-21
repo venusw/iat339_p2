@@ -1,0 +1,33 @@
+doctype html
+
+html(lang='en') 
+
+	head
+	
+		block title
+			title Sugar Craft
+
+		//- sets the character encoding for HTML docs. utf-8 is pretty standard.
+		meta(charset='utf-8')
+
+		//- to match the screen's width in device independent pixels and establishes a 1:1 relationship between CSS pixels and device independent pixels
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+
+		link(href='css/main.css' rel='stylesheet' type='text/css')
+
+		//- web font in clude here
+	
+	body 
+		header
+			//- logo and nav
+			block current-page
+				//- li: a(href="/index.html" class=home_current ? 'current' : '') Home 
+
+		.content
+			block content
+
+		footer
+			//- include footer here
+
+		//- include scripts here
+		
