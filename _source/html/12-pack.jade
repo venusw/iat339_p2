@@ -1,0 +1,26 @@
+//- example content page
+
+extends _base-template.jade
+
+block current-page
+	//- sets the active page in the main navigation
+	- var products = true
+
+mixin page_title
+	| Products
+
+block title
+	title Sugar Craft – 
+		+page_title
+
+block content
+	//- content goes here
+	p This is my Products page.
+	div.product-image
+		a(href='#')
+			figure
+				img(src='image/macaron.jpg' alt='macaron' class='image')
+				figcaption macaron
+
+	h1 12 Pack Macaron			
+	p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt lacus euismod sem efficitur imperdiet. Morbi velit orci, ullamcorper a molestie eu, rutrum nec sem. Vivamus eu velit ultrices, blandit ligula condimentum, ultricies urna. Aenean ut convallis mauris. Vivamus posuere urna ac metus cursus laoreet. Vestibulum pulvinar enim sed mi tristique malesuada. Vestibulum orci dui, faucibus sit amet dolor eu, ullamcorper fringilla sapien. 
