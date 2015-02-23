@@ -91,6 +91,7 @@ a.button {
   background-color: #3ca39b;
   border-radius: 0em;
   text-decoration: none;
+  text-transform: uppercase;
   -webkit-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
 }
@@ -137,13 +138,14 @@ figure {
 .product-image {
   float: left;
   display: inline-block;
-  max-width: 400px;
+  max-width: 550px;
   padding: 0em 2em 2em 2em;
 
-  p {
-    display: inline-block;
-    padding: 1em;
-  }
+    p {
+      float: right;
+      padding: 5em;
+    }
+
 }
 
   figcaption { 
