@@ -21,16 +21,16 @@ html(lang='en')
 	body 
 		header
 			//- logo and nav
-			block current-page
-				//- li: a(href="/index.html" class=home_current ? 'current' : '') Home 
-			class
+			//- li: a(href="/index.html" class=home_current ? 'current' : '') Home 
 			div(id='logo')
 				img(src='image/sugar-logo.jpeg' alt='logo')
 			nav
 				ul
-					li: a(href='#') Home
-					li: a(href='#') Products
-					li: a(href='#') About
+					block current-page
+					li: a(href='/index.html' class=home ? 'current' : '') Home
+					li: a(href='/products.html' class=products ? 'current' : '') Products
+					li: a(href='/news.html' class=news ? 'current' : '') News
+					li: a(href='/about.html' class=about ? 'current' : '') About
 
 		.content
 			block content
