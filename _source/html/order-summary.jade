@@ -1,0 +1,24 @@
+//- example content page
+
+extends _base-template.jade
+
+block current-page
+	//- sets the active page in the main navigation
+	- var products = true
+
+mixin page_title
+	| 12 Pack of Macarons Order Form
+
+block title
+	title Sugar Craft – 
+		+page_title
+
+block content
+	//- content goes here
+	h1 Order Details
+
+	p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt tincidunt mattis. Integer consequat, neque eget tincidunt aliquam, tortor arcu faucibus ligula, et ullamcorper sapien dolor sit amet dolor. Proin id condimentum mi. Suspendisse consequat in quam nec imperdiet. Ut tincidunt ipsum diam, eu hendrerit nibh tincidunt non. Aliquam placerat enim id elit consequat, auctor elementum tortor facilisis. In interdum ligula sem, sit amet volutpat lorem mollis et. Donec condimentum finibus vestibulum. Aliquam vel mauris semper, laoreet purus non, semper massa. Mauris mattis tristique vehicula.
+
+	p Quantity: 4 , Total: $12
+	
+	button Review Final Order

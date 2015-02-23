@@ -1,3 +1,39 @@
+// RESET
+
+// remove webkit browser style
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+// remove number spinner
+input[type=number] {
+    -moz-appearance:textfield; // for firefox
+
+    &::-webkit-inner-spin-button, ::-webkit-outer-spin-button { // for webkit browsers
+      -webkit-appearance: none;
+      margin: 0;
+    }
+}
+
+button {
+  outline: 0;
+  background: none;
+  border: none;
+}
+
+// VARIABLES AND PLACEHOLDERS
+
+%clear {
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+}
+
 // GENERAL
 
 *, *::after, *::before {
@@ -7,8 +43,9 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  padding: 2rem;
+  font-family: normal 100% 'Open Sans', sans-serif;
+  line-height: 1.5;
+  padding: 1rem;
 }
 
 section {
@@ -59,6 +96,10 @@ a.button {
 }
 a.button:hover, a.button:focus {
   background-color: #435b59;
+}
+
+.content {
+  margin-bottom: 3em;
 }
 
 // IMAGES
@@ -146,13 +187,81 @@ label {
 
 }
 
-input[type='text'], textarea {
+.order-form {
+  margin-bottom: 1.5em;
+}
+
+.form-row:first-child {
+  border-top: 1px solid #AAA;
+  padding-top: 1em;
+}
+
+.form-row {
+  border-top: 1px solid #DDD;
+  padding-top: 1em;
+  @extend %clear;
+}
+
+.form-row label {
+  margin-top: .65em;
+  display: inline-block;
+}
+
+.form-row.next-step {
+  padding-top: 0;
+  border-top: none;
+  
+  button, a {
+    float: right;
+  } 
+
+  a {
+    margin: .75em 1.5em 0 0;
+  }
+
+}
+
+.list-header {
+  padding-left: 0;
+  margin-bottom: 0;
+  font-style: italic;
+  color: #777;
+  @extend %clear;
+
+  li {
+    list-style: none;
+    padding: .75em 0;
+    float: left;
+
+    &:last-child {
+      float: right;
+      margin-right: 2.5em;
+    }
+  }
+}
+
+.order-list {
+  padding-left: 0;
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+
+
+input[type='text'], input[type='number'], textarea {
   display: block;
-  width: 100%;
+  height: 3em;
+  // width: 100%;
   max-width: 24em;
   margin-bottom: 1em;
   border: 1px solid #AAA;
-  padding: .25em .4em;
+  padding-left: .4em;
 }
 
 input[type='radio'] {
@@ -164,6 +273,80 @@ select {
   margin-bottom: 1em;
 }
 
+input.quantity {
+  width: 3em;
+  display: inline-block;
+  padding-left: 0;
+  text-align: center;
+}
+
+.input-quantity {
+  display: inline-block;
+  float: right;
+}
+
+button, input[type='submit'] {
+  height: 3em;
+  padding: 0 1.5em;
+  background-color: #DDD;
+  border: 1px solid #AAA;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, #ededed 0%,#c1c1c1 100%,#e0e0e0 100%); 
+}
+
+button.counter {
+  width: 1.75em;
+  height: 1.75em;
+  margin: 0 .75em;
+  padding: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.order-total {
+  border-top: 1px solid #BBB;
+  padding-top: 1em;
+  margin-bottom: 1em;
+
+  p {
+    float: right;
+    clear: right;
+    margin:0;
+    margin-bottom: 1em;
+    // padding-right: 1em;
+    font-size: 1.125em;
+  }
+
+  span {
+    font-weight: bold;
+    margin-left: .25em;
+  }
+
+  @extend %clear;
+
+}
+
+// TEMP FORM STYLES
+
+h1.order-heading {
+  font-size: 1.125em; 
+  text-transform: uppercase; 
+  margin-top: 3em; 
+  color: #777; 
+  margin-bottom: 0.25em;
+}
+
+h2.order-heading {
+  margin: 0;
+}
+
+h3.order-heading {
+  margin-top: 0;
+}
+
+// HEADER
 
 header {
   border: 0px solid #CCC;

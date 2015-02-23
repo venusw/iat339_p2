@@ -1,0 +1,45 @@
+//- example content page
+
+extends _base-template.jade
+
+block current-page
+	//- sets the active page in the main navigation
+	- var products = true
+
+mixin page_title
+	| 12 Pack of Macarons Order Form
+
+block title
+	title Sugar Craft – 
+		+page_title
+
+block content
+	//- content goes here
+	h1.order-heading Order Details
+
+	form.order-form(method='link' action='cart.html')
+
+		ul.list-header
+			li Quantity
+			li Price
+		ul.order-list
+			li: ul 
+				li Large Box of Matcha Frappe Macarons <a href='#'>Remove</a>
+				li: input(type='number' class='quantity' value='2' min='0')
+				li $44
+			li: ul 
+				li Large Box of Vanilla Bean Macarons <a href='#'>Remove</a>
+				li: input(type='number' class='quantity' value='3' min='0')
+				li $66
+			li: ul
+				li Earl Grey and Dark Mocha Party Favour Macarons <a href='#'>Remove</a>
+				li: input(type='number' class='quantity' value='12' min='0')
+				li $66
+			li: ul
+				li Vanilla Regular Cupcakes <a href='#'>Remove</a>
+				li: input(type='number' class='quantity' value='24' min='0')
+				li $50
+
+		p Subtotal: $226
+		
+		input(type='submit' value='Review Final Order') 

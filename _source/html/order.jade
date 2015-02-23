@@ -1,0 +1,61 @@
+//- example content page
+
+extends _base-template.jade
+
+block current-page
+	//- sets the active page in the main navigation
+	- var products = true
+
+mixin page_title
+	| Large Box of Macarons Order Form
+
+block title
+	title Sugar Craft – 
+		+page_title
+
+block content
+	//- content goes here
+	h1.order-heading Order Form
+	h2.order-heading Large Box of Macarons (12 pcs)
+	h3.order-heading $22 / box
+
+	form.order-form(method='link' action='cart.html')
+
+		ul.list-header
+			li Seasonal flavours 
+			li Quantity
+
+		.form-row
+			label Matcha Frappe
+			.input-quantity
+				button(class='counter counter-decrease') &minus;
+				input(type='number' class='quantity' value='0' min='0')
+				button(class='counter counter-increase') +
+		
+		.form-row
+			label Earl Grey
+			.input-quantity
+				button(class='counter counter-decrease') &minus;
+				input(type='number' class='quantity' value='0' min='0')
+				button(class='counter counter-increase') +
+		
+		.form-row
+			label Vanilla Bean
+			.input-quantity
+				button(class='counter counter-decrease') &minus;
+				input(type='number' class='quantity' value='0' min='0')
+				button(class='counter counter-increase') +
+		
+		.form-row
+			label Dark Mocha
+			.input-quantity
+				button(class='counter counter-decreasee') &minus;
+				input(type='number' class='quantity' value='0' min='0')
+				button(class='counter counter-increase' type='submit') +
+
+		
+		.order-total
+			p Subtotal (4 items): <span>$88</span>
+
+		div.form-row.next-step
+			input(type='submit' value='Add to Order') 
