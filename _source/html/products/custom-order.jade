@@ -1,0 +1,18 @@
+//- example content page
+
+extends ../_base-template.jade
+
+block current-page
+	//- sets the active page in the main navigation
+	- var products = true
+
+mixin page_title
+	| Custom Order
+
+block title
+	title Sugar Craft – 
+		+page_title
+
+block content
+	//- content goes here
+	h1 This is the Custom Order page.
