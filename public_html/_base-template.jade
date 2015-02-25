@@ -13,17 +13,16 @@ html(lang='en')
 		//- to match the screen's width in device independent pixels and establishes a 1:1 relationship between CSS pixels and device independent pixels
 		meta(name='viewport' content='width=device-width, initial-scale=1')
 
-		link(href='css/main.css' rel='stylesheet' type='text/css')
+		link(href='/css/main.css' rel='stylesheet' type='text/css')
 
-		//- web font in clude here
+		//- web font include here
 		link(href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css')
 	
 	body 
 		header
 			//- logo and nav
-			//- li: a(href="/index.html" class=home_current ? 'current' : '') Home 
 			div(id='logo')
-				img(src='image/sugar-logo.jpeg' alt='logo')
+				img(src='/image/sugar-logo.jpeg' alt='logo')
 			nav
 				ul
 					block current-page
