@@ -24,14 +24,16 @@ button {
 
 // VARIABLES AND PLACEHOLDERS
 
-%clear {
+$brand-gold:  #a7862e;
+$brand-silver: #7c7c7c;
+$brand-pink: #eed7e9;
 
+%clear {
   &:after {
     content: '';
     display: block;
     clear: both;
   }
-
 }
 
 // GENERAL
@@ -53,23 +55,17 @@ section {
   padding: 0.5em 0;
   border-top: 1px solid #333;
 }
-section h3 {
+
+h3 {
   margin-bottom: 0;
-}
-section p {
-  margin-top: 0;
 }
 
 h4 {
   color: #777;
 }
 
-code, pre {
-  display: block;
-  background-color: #EEE;
-  padding: 0.5em 0.75em;
-  margin: 0;
-  margin-bottom: 1em;
+p {
+  margin-top: 0;
 }
 
 a.htext {
@@ -92,14 +88,24 @@ a.button:hover, a.button:focus {
   background-color: #435b59;
 }
 
+code, pre {
+  display: block;
+  background-color: #EEE;
+  padding: 0.5em 0.75em;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
 .content {
   margin-bottom: 3em;
 }
 
 // IMAGES
+
 .image {
   width: 100%;
 }
+
 .images {
   display: inline-block;
   padding: 0.5em 0.5em;
@@ -113,15 +119,23 @@ figure {
   margin-right: auto;
 }
 
+figcaption { 
+  display: block;
+  font-size: 1.3em;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .image-gallery a {
   display: inline-block;
   max-width: 400px;
   padding: 2em 1em 1em 1em;
 
   opacity: 1;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
   transition: opacity .25s ease-in-out;
- -moz-transition: opacity .25s ease-in-out;
- -webkit-transition: opacity .25s ease-in-out;
 }
 
 .image-gallery a:focus, .image-gallery a:hover {
@@ -138,17 +152,69 @@ figure {
       float: right;
       padding: 5em;
     }
-
 }
 
-  figcaption { 
-      display: block;
-      font-size: 1.3em;
-      color: black;
-      text-transform: uppercase;
-      text-align: center;
+// HEADER
+
+header {
+  border: 0px solid #CCC;
+
+  #logo {
+    float: left;
   }
 
+  img {
+    max-width: 50px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    flex-grow: 1;
+    list-style: none;
+    max-width: 8em;
+    border: none;
+  }
+
+  a {
+    display: block;
+    padding: 1em 0;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    background: #fff;
+
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+
+  nav a:hover, nav a:focus {
+    color: #3ca39b;
+  }
+}
+
+// FOOTER
+
+footer {
+  background-color: #ffffff;
+  font-size:.8rem;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color:#666;
+  text-align:center;
+  padding:10px;
+}
 
 // FORM
 
@@ -247,12 +313,9 @@ label {
   }
 }
 
-
-
 input[type='text'], input[type='number'], textarea {
   display: block;
   height: 3em;
-  // width: 100%;
   max-width: 24em;
   margin-bottom: 1em;
   border: 1px solid #AAA;
@@ -310,7 +373,6 @@ button.counter {
     clear: right;
     margin:0;
     margin-bottom: 1em;
-    // padding-right: 1em;
     font-size: 1.125em;
   }
 
@@ -340,64 +402,3 @@ h2.order-heading {
 h3.order-heading {
   margin-top: 0;
 }
-
-// HEADER
-
-header {
-  border: 0px solid #CCC;
-
-  #logo {
-    float: left;
-  }
-
-  img {
-    max-width: 50px;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    flex-grow: 1;
-    list-style: none;
-    max-width: 8em;
-    border: none;
-  }
-
-  a {
-    display: block;
-    padding: 1em 0;
-    color: black;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    background: #fff;
-
-    -webkit-transition: background-color 0.5s;
-    transition: background-color 0.5s;
-}
-
-  nav a:hover, nav a:focus {
-  color: #3ca39b;
-  }
-}
-
-  footer {
-    background-color: #ffffff;
-    font-size:.8rem;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    color:#666;
-    text-align:center;
-    padding:10px;
-
-  }
