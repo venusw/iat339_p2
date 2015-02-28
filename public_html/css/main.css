@@ -376,6 +376,9 @@ button {
   display: block;
   clear: both; }
 
+.is-expanded {
+  display: block !important; }
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -470,35 +473,55 @@ figcaption {
     padding: 5em; }
 
 header {
+  display: flex;
   border: 0px solid #CCC; }
   header #logo {
     float: left; }
   header img {
     max-width: 50px; }
-  header nav {
-    width: 100%; }
-  header ul {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0; }
-  header li {
-    flex-grow: 1;
-    list-style: none;
-    max-width: 8em;
-    border: none; }
-  header a {
+  header nav a, header .go-to-nav, header .shopping-cart {
     display: block;
-    padding: 1em 0;
-    color: black;
+    padding: 1em 1.25em;
+    color: #000;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     background: #fff;
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s; }
-  header nav a:hover, header nav a:focus {
+  header nav a:hover, header nav a:focus, header .go-to-nav:hover, header .go-to-nav:focus {
     color: #3ca39b; }
+  header .shopping-cart {
+    max-width: 3.5em;
+    text-indent: 56px;
+    overflow: hidden;
+    background: transparent url("/image/shopping-cart.png") no-repeat center -2px;
+    background-size: 56px; }
+
+nav {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 5em;
+  left: 0;
+  right: 0; }
+  nav ul {
+    padding-left: 0;
+    max-width: 22em;
+    border: 1px solid #BBB;
+    margin: 0 auto; }
+  nav li {
+    list-style: none;
+    border-bottom: 1px solid #BBB; }
+  nav li:last-child {
+    display: none; }
+  nav a.button {
+    display: block;
+    margin: 0 auto;
+    padding: 1em 0; }
+
+.go-to-nav {
+  margin: 0 auto; }
 
 footer {
   background-color: #ffffff;
@@ -638,3 +661,34 @@ h2.order-heading {
 
 h3.order-heading {
   margin-top: 0; }
+
+@media (min-width: 768px) {
+  header {
+    display: block; }
+
+  .go-to-nav, header > .shopping-cart {
+    display: none !important; }
+
+  nav {
+    position: static;
+    display: block; }
+    nav ul {
+      max-width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      border: none; }
+    nav li {
+      list-style: none;
+      border: none; }
+    nav li:last-child {
+      display: block; }
+    nav .lrg-item {
+      margin: 0 .5em; }
+    nav a.button {
+      margin-top: .5em;
+      padding: .5em .75em; }
+
+  .shopping-cart {
+    margin-left: .75em; } }
