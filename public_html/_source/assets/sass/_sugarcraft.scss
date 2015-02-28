@@ -28,12 +28,22 @@ $brand-gold:  #a7862e;
 $brand-silver: #7c7c7c;
 $brand-pink: #eed7e9;
 
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
 %clear {
   &:after {
     content: '';
     display: block;
     clear: both;
   }
+}
+
+// STATES 
+
+.is-expanded {
+  display: block !important;
 }
 
 // GENERAL
@@ -157,6 +167,7 @@ figcaption {
 // HEADER
 
 header {
+  display: flex;
   border: 0px solid #CCC;
 
   #logo {
@@ -167,28 +178,10 @@ header {
     max-width: 50px;
   }
 
-  nav {
-    width: 100%;
-  }
-
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    flex-grow: 1;
-    list-style: none;
-    max-width: 8em;
-    border: none;
-  }
-
-  a {
+  nav a, .go-to-nav, .shopping-cart {
     display: block;
-    padding: 1em 0;
-    color: black;
+    padding: 1em 1.25em;
+    color: #000;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
@@ -198,9 +191,55 @@ header {
     transition: background-color 0.5s;
   }
 
-  nav a:hover, nav a:focus {
+  nav a:hover, nav a:focus, .go-to-nav:hover, .go-to-nav:focus {
     color: #3ca39b;
   }
+
+  .shopping-cart {
+    max-width: 3.5em;
+    text-indent: 56px; // hide the cart wording
+    overflow: hidden;
+    background: transparent url('/image/shopping-cart.png') no-repeat center -2px;    
+    background-size: 56px; 
+  }
+
+}
+
+nav {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 5em;
+  left: 0;
+  right: 0;
+
+
+  ul {
+    padding-left: 0;
+    max-width: 22em;
+    border: 1px solid #BBB;
+    margin: 0 auto;
+  }
+
+  li {
+    list-style: none;
+    border-bottom: 1px solid #BBB;
+  }
+
+  li:last-child {
+    display: none;
+  }
+
+  a.button {
+    display: block;
+    margin: 0 auto;
+    padding: 1em 0;
+  }
+
+}
+
+.go-to-nav {
+  margin: 0 auto;
 }
 
 // FOOTER
@@ -401,4 +440,55 @@ h2.order-heading {
 
 h3.order-heading {
   margin-top: 0;
+}
+
+// SMALL SCREENS AND UP 
+
+@media(min-width: $screen-sm) {
+
+  header {
+    display: block;
+  }
+
+  .go-to-nav, header > .shopping-cart {
+    display: none !important;
+  }
+
+  nav {
+    position: static;
+    display: block;
+
+    ul {
+      max-width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    li {
+      list-style: none;
+      border: none;
+    }
+
+    li:last-child {
+      display: block;
+    }
+
+    .lrg-item {
+      margin: 0 .5em;
+    }
+
+    a.button {
+      margin-top: .5em;
+      padding: .5em .75em;
+    }
+
+  }
+
+  .shopping-cart {
+    margin-left: .75em;
+  }
+
 }
