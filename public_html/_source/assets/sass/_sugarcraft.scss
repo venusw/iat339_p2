@@ -110,6 +110,14 @@ code, pre {
   margin-bottom: 3em;
 }
 
+.list {
+  padding-left: 0;
+}
+
+.list li {
+  list-style: none;  
+}
+
 // IMAGES
 
 .image {
@@ -214,6 +222,7 @@ nav {
   display: none;
   width: 100%;
   position: absolute;
+  z-index: 999;
   top: 5em;
   left: 0;
   right: 0;
@@ -264,6 +273,7 @@ footer {
 
 fieldset {
   padding: 0;
+  margin: 0;
   border: none; 
 
   label {
@@ -296,34 +306,19 @@ label {
   margin-bottom: 1.5em;
 }
 
-.form-row:first-child {
-  border-top: 1px solid #AAA;
-  padding-top: 1em;
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.form-row {
-  border-top: 1px solid #DDD;
-  padding-top: 1em;
-  @extend %clear;
-}
-
-.form-row label {
-  margin-top: .65em;
+.item-row > span {
   display: inline-block;
 }
 
-.form-row.next-step {
-  padding-top: 0;
-  border-top: none;
-  
-  button, a {
-    float: right;
-  } 
-
-  a {
-    margin: .75em 1.5em 0 0;
-  }
-
+.item-row label {
+  margin-top: .65em;
+  display: inline-block;
 }
 
 .list-header {
@@ -357,9 +352,10 @@ label {
   }
 }
 
-input[type='text'], input[type='number'], textarea {
+input[type='text'], input[type='number'], input[type='email'], textarea {
   display: block;
-  height: 3em;
+  height: 2.5em;
+  width: 100%;
   max-width: 24em;
   margin-bottom: 1em;
   border: 1px solid #AAA;
@@ -376,8 +372,9 @@ select {
 }
 
 input.quantity {
-  width: 3em;
   display: inline-block;
+  width: 2.5em;
+  margin: 0;
   padding-left: 0;
   text-align: center;
 }
@@ -407,31 +404,17 @@ button.counter {
   }
 }
 
-.order-total {
-  border-top: 1px solid #BBB;
-  padding-top: 1em;
-  margin-bottom: 1em;
-
-  p {
-    float: right;
-    clear: right;
-    margin:0;
-    margin-bottom: 1em;
-    font-size: 1.125em;
-  }
-
-  span {
-    font-weight: bold;
-    margin-left: .25em;
-  }
-
-  @extend %clear;
-
-}
-
 // TEMP FORM STYLES
 
 h1.order-heading {
+  margin: 0;
+}
+
+h2.order-heading {
+  margin-top: 0;
+}
+
+h3.order-heading {
   font-size: 1.125em; 
   text-transform: uppercase; 
   margin-top: 3em; 
@@ -439,12 +422,79 @@ h1.order-heading {
   margin-bottom: 0.25em;
 }
 
-h2.order-heading {
+.list-header {
+  display: none;
+} 
+
+.order-list {
+  border-bottom: 1px solid #DDD;
+}
+
+.order-list li {
+  border-top: 1px solid #DDD;
+  padding: .75em 0;
+}
+
+.order-list p {
   margin: 0;
 }
 
-h3.order-heading {
-  margin-top: 0;
+.item-delete {
+  cursor: pointer;
+  width: 1.75em;
+  height: 1.75em;
+  margin-top: .85em;
+  border-radius: 50%;
+  background-color: #999;
+  overflow: hidden;
+  text-indent: 100%; 
+
+  &:before {
+    content: '×';
+    color: #FFF;
+    position: relative;
+    top: .125em;
+    left: -1.2em;
+  }
+
+}
+
+.item-quantity {
+  margin-top: .5em;
+}
+
+.item-price, .item-total {
+  margin-top: 1em;
+}
+
+.item-subtotal {
+  margin-left: 1em;
+}
+
+.order-total {
+  text-align: right;
+}
+
+.next-step {
+  display: flex;
+  justify-content: flex-end;
+
+  button, a {
+    float: right;
+  } 
+
+  a {
+    margin: .75em 1.5em 0 0;
+  }
+}
+
+.next-step p {
+  margin: .75em 1.5em 0 0; 
+}
+
+.order-summary .quantity {
+  color: #777;
+  white-space: nowrap;
 }
 
 // SMALL SCREENS AND UP 

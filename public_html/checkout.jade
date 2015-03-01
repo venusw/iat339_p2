@@ -1,0 +1,39 @@
+//- example content page
+
+extends _base-template.jade
+
+block current-page
+	//- sets the active page in the main navigation
+	- var products = true
+
+mixin page_title
+	| Checkout
+
+block title
+	title Sugar Craft – 
+		+page_title
+
+block content
+	//- content goes here
+	h1 Checkout
+
+	form.order-form(method='link' action='order-summary.html')
+
+		h3 Contact Information
+		label First name
+			input(type='text') 
+		label Last name
+			input(type='text') 
+		label Email
+			input(type='email')
+
+		h3 Delivery Method
+		fieldset
+			legend: strong Choose the area you would want your order to be delivered to, or pick up your order at no cost. We will figure out a precise location in a follow-up email.
+			label: <input type='radio' name='radio-group'> <b>Pick-up:</b> Free
+			label: <input type='radio' name='radio-group'> <b>Burnaby/Boundary:</b> $10-15
+			label: <input type='radio' name='radio-group'> <b>Commercial/DT Vancouver:</b> $20
+			label: <input type='radio' name='radio-group'> <b>Richmond/Tri-Cities:</b> less than $20
+
+		.next-step
+			input(type='submit' value='Review Final Order')
