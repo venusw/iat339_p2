@@ -30,33 +30,34 @@ block content
 			li Seasonal flavours 
 			li Quantity
 
-		.form-row
-			label Matcha Frappe
-			.input-quantity
-				button(class='counter counter-decrease') &minus;
-				input(type='number' class='quantity' value='0' min='0')
-				button(class='counter counter-increase') +
-		
-		.form-row
-			label Earl Grey
-			.input-quantity
-				button(class='counter counter-decrease') &minus;
-				input(type='number' class='quantity' value='0' min='0')
-				button(class='counter counter-increase') +
-		
-		.form-row
-			label Vanilla Bean
-			.input-quantity
-				button(class='counter counter-decrease') &minus;
-				input(type='number' class='quantity' value='0' min='0')
-				button(class='counter counter-increase') +
-		
-		.form-row
-			label Dark Mocha
-			.input-quantity
-				button(class='counter counter-decreasee') &minus;
-				input(type='number' class='quantity' value='0' min='0')
-				button(class='counter counter-increase' type='submit') +
+		ul.order-list
+			li: .item-row
+				label Matcha Frappe
+				.input-quantity
+					button(class='counter counter-decrease') &minus;
+					input(type='number' class='quantity' value='0' min='0')
+					button(class='counter counter-increase') +
+			
+			li: .item-row
+				label Earl Grey
+				.input-quantity
+					button(class='counter counter-decrease') &minus;
+					input(type='number' class='quantity' value='0' min='0')
+					button(class='counter counter-increase') +
+			
+			li: .item-row
+				label Vanilla Bean
+				.input-quantity
+					button(class='counter counter-decrease') &minus;
+					input(type='number' class='quantity' value='0' min='0')
+					button(class='counter counter-increase') +
+			
+			li: .item-row
+				label Dark Mocha
+				.input-quantity
+					button(class='counter counter-decreasee') &minus;
+					input(type='number' class='quantity' value='0' min='0')
+					button(class='counter counter-increase' type='submit') +
 
 	
 	a(class="button" href="#") place an order

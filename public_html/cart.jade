@@ -15,31 +15,36 @@ block title
 
 block content
 	//- content goes here
-	h1.order-heading Order Details
+	h1 Order Details
 
-	form.order-form(method='link' action='cart.html')
+	form.order-form(method='link' action='checkout.html')
 
 		ul.list-header
 			li Quantity
 			li Price
 		ul.order-list
-			li: ul 
-				li Large Box of Matcha Frappe Macarons <a href='#'>Remove</a>
-				li: input(type='number' class='quantity' value='2' min='0')
-				li $44
-			li: ul 
-				li Large Box of Vanilla Bean Macarons <a href='#'>Remove</a>
-				li: input(type='number' class='quantity' value='3' min='0')
-				li $66
-			li: ul
-				li Earl Grey and Dark Mocha Party Favour Macarons <a href='#'>Remove</a>
-				li: input(type='number' class='quantity' value='12' min='0')
-				li $66
-			li: ul
-				li Vanilla Regular Cupcakes <a href='#'>Remove</a>
-				li: input(type='number' class='quantity' value='24' min='0')
-				li $50
+			li
+				.item-row
+					p.item-title Large Box of Macarons - Matcha Frappe
+				.item-row 
+					span.item-delete Remove
+					span.item-price Price: $22
+					div.item-quantity
+						span Qty:
+						input(type='number' class='quantity' value='2' min='0')
+					span.item-total Total: $44
+			li
+				.item-row
+					p.item-title Large Box of Macarons - Vanilla Bean
+				.item-row
+					span.item-delete Remove
+					span.item-price Price: $22
+					div.item-quantity
+						span Qty:
+						input(type='number' class='quantity' value='3' min='0')
+					span.item-total Total: $66
 
-		p Subtotal: $226
+		p.order-total Subtotal (5 items): $110
 		
-		input(type='submit' value='Review Final Order') 
+		.next-step
+			input(type='submit' value='Checkout')

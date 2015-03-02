@@ -7,7 +7,7 @@ block current-page
 	- var products = true
 
 mixin page_title
-	| 12 Pack of Macarons Order Form
+	| Checkout
 
 block title
 	title Sugar Craft – 
@@ -15,10 +15,35 @@ block title
 
 block content
 	//- content goes here
-	h1 Order Details
+	h1 Checkout
 
-	p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt tincidunt mattis. Integer consequat, neque eget tincidunt aliquam, tortor arcu faucibus ligula, et ullamcorper sapien dolor sit amet dolor. Proin id condimentum mi. Suspendisse consequat in quam nec imperdiet. Ut tincidunt ipsum diam, eu hendrerit nibh tincidunt non. Aliquam placerat enim id elit consequat, auctor elementum tortor facilisis. In interdum ligula sem, sit amet volutpat lorem mollis et. Donec condimentum finibus vestibulum. Aliquam vel mauris semper, laoreet purus non, semper massa. Mauris mattis tristique vehicula.
-
-	p Quantity: 4 , Total: $12
+	h3 Your Order
+	ul.order-list.order-summary
+		li 
+			.item-row
+				p Large Box of Macarons - Matcha Frappe 
+					span.quantity × 2
+				span.item-subtotal $44
+		li 
+			.item-row
+				p Large Box of Macarons - Vanilla Bean 
+					span.quantity × 3
+				span.item-subtotal $66
+		li 
+			.item-row
+				p <b>Delivery Method:</b> 
+					span Pick-up
+				span $0
 	
-	button Review Final Order
+	.item-row
+		a(href='#') Edit order
+		div Total (5 items): <span>$110</span>
+
+	h3 Contact Information
+	ul.list
+		li <b>Name:</b> John Doe
+		li <b>Email:</b> jon.doe@email.com
+	a(href='#') Edit contact info
+
+	.next-step
+		input(type='submit' value='Send Order')

@@ -14,10 +14,17 @@ block title
 		+page_title
 
 block content
+
 	//- content goes here
-	h1.order-heading Order Form
-	h2.order-heading Large Box of Macarons (12 pcs)
-	h3.order-heading $22 / box
+	
+	img.image(src='/image/large-box-curved-arrangement.jpg')
+
+	h1.order-heading 12 Pack Macarons
+	h2.order-heading $22
+	p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget accumsan metus, ac congue diam. Donec in aliquam diam, eu dapibus lectus. Pellentesque id orci euismod, laoreet nisi tincidunt.
+
+
+	h3.order-heading Order Form
 
 	form.order-form(method='link' action='cart.html')
 
@@ -25,37 +32,38 @@ block content
 			li Seasonal flavours 
 			li Quantity
 
-		.form-row
-			label Matcha Frappe
-			.input-quantity
-				button(class='counter counter-decrease') &minus;
-				input(type='number' class='quantity' value='0' min='0')
-				button(class='counter counter-increase') +
 		
-		.form-row
-			label Earl Grey
-			.input-quantity
-				button(class='counter counter-decrease') &minus;
-				input(type='number' class='quantity' value='0' min='0')
-				button(class='counter counter-increase') +
+		ul.order-list
+			li: .item-row
+				label Matcha Frappe
+				.input-quantity
+					button(class='counter counter-decrease') &minus;
+					input(type='number' class='quantity' value='0' min='0')
+					button(class='counter counter-increase') +
+			
+			li: .item-row
+				label Earl Grey
+				.input-quantity
+					button(class='counter counter-decrease') &minus;
+					input(type='number' class='quantity' value='0' min='0')
+					button(class='counter counter-increase') +
+			
+			li: .item-row
+				label Vanilla Bean
+				.input-quantity
+					button(class='counter counter-decrease') &minus;
+					input(type='number' class='quantity' value='0' min='0')
+					button(class='counter counter-increase') +
 		
-		.form-row
-			label Vanilla Bean
-			.input-quantity
-				button(class='counter counter-decrease') &minus;
-				input(type='number' class='quantity' value='0' min='0')
-				button(class='counter counter-increase') +
-		
-		.form-row
-			label Dark Mocha
-			.input-quantity
-				button(class='counter counter-decreasee') &minus;
-				input(type='number' class='quantity' value='0' min='0')
-				button(class='counter counter-increase' type='submit') +
+			li: .item-row
+				label Dark Mocha
+				.input-quantity
+					button(class='counter counter-decreasee') &minus;
+					input(type='number' class='quantity' value='0' min='0')
+					button(class='counter counter-increase' type='submit') +
 
 		
-		.order-total
-			p Subtotal (4 items): <span>$88</span>
+		p.order-total Subtotal: <span>0</span>
 
-		div.form-row.next-step
+		div.item-row.next-step
 			input(type='submit' value='Add to Order') 
