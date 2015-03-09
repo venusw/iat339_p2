@@ -400,15 +400,18 @@ footer {
 
   .footer-left{
     float: left;
+    display: inline-block;
 
 }
   .contact-logo {
-    max-width: 20px;
+    width: 100%;
+    max-width: 40px;
+    padding-left: 1em;
 
 }
   display: flex;
   background-color: #605e5e;
-  font-size:.8rem;
+  font-size:.9rem;
   text-decoration: none;
   font-family: 'lora', serif;
   font-weight: 300;
