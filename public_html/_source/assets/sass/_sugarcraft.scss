@@ -200,10 +200,16 @@ figcaption {
   text-align: center;
 }
 
-.image-gallery a {
+.image-gallery {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+
   display: flex;
-  flex-directon: row;
-  max-width: 400px;
+  flex-direction: column;
+}
+
+.image-gallery a {
+  // max-width: 400px;
 
   opacity: 1;
   -moz-transition: opacity .25s ease-in-out;
@@ -692,10 +698,8 @@ h3.order-heading {
 
   // image
   .image {
-  width: 100%;
-  margin-bottom: -10em;
-
-}
+    width: 100%;
+  }
 
   figure { 
     overflow: hidden;
@@ -716,12 +720,11 @@ h3.order-heading {
     text-align: center;
   }
 
-  .image-gallery a {
-    display: flex;
-    flex-directon: column;
-    max-width: 400px;
+  .image-gallery {
+    -webkit-flex-direction: row;
 
-}
+    flex-direction: row;
+  }
 }
 
 @media(min-width: $screen-md) {

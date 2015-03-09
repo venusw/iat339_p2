@@ -440,7 +440,8 @@ button {
 
 body {
   font-family: normal 100% 'Lora', serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  color: #333; }
 
 section {
   margin: 1em 0;
@@ -491,15 +492,14 @@ code, pre {
   list-style: none; }
 
 .image {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 0px; }
 
 .images {
   display: inline-block;
   padding: 0.5em 0.5em; }
 
 figure {
-  display: inline-block;
-  padding: 1em 0em 1em 0em;
   margin-left: auto;
   margin-right: auto; }
   figure p {
@@ -507,15 +507,18 @@ figure {
     text-align: center; }
 
 figcaption {
-  display: block;
   font-size: 1.3em;
   color: black;
   text-transform: uppercase;
   text-align: center; }
 
+.image-gallery {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  display: flex;
+  flex-direction: column; }
+
 .image-gallery a {
-  display: inline-block;
-  max-width: 400px;
   opacity: 1;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
@@ -533,12 +536,6 @@ figcaption {
     float: right;
     padding: 5em; }
 
-.home-image-sub {
-  float: left;
-  max-width: 200px; }
-  .home-image-sub p {
-    padding: 5em 5em 5em 5em; }
-
 .about {
   max-width: 400px;
   float: left;
@@ -546,6 +543,25 @@ figcaption {
 
 .about-content {
   padding: 2em; }
+
+.download {
+  text-align: center;
+  padding: 1em 2em 1em 2em;
+  font-family: 'lora';
+  background-color: #f2f2f2; }
+  .download button, .download input[type='catalogue'] {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    height: 3em;
+    padding: 0em 0em;
+    border: 0px;
+    border-radius: 3px;
+    background: #a7862e;
+    -webkit-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out; }
+  .download button, .download input[type='catalogue']:hover, .download button, .download input[type='catalogue']:focus {
+    background-color: #666; }
 
 header {
   display: -webkit-flex;
@@ -839,4 +855,25 @@ h3.order-heading {
     margin-left: .75em; }
 
   .login-button {
-    border: 1px solid #999; } }
+    border: 1px solid #999; }
+
+  .image {
+    width: 100%; }
+
+  figure {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto; }
+    figure p {
+      color: black;
+      text-align: center; }
+
+  figcaption {
+    font-size: 1.3em;
+    color: black;
+    text-transform: uppercase;
+    text-align: center; }
+
+  .image-gallery {
+    -webkit-flex-direction: row;
+    flex-direction: row; } }
