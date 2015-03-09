@@ -2,8 +2,27 @@
 
 $(function() {
 
-	$('.go-to-nav').on('click', function() {
-		$('nav').toggleClass('is-expanded');
+	$('.go-to-nav').click(function() {
+		var $nav = $('nav ul');
+		var state = $nav.hasClass('is-expanded');
+
+		if(state === false) { // is not expanded
+
+			$nav.addClass('is-expanding');
+			$nav.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function () {
+				$nav.addClass('is-expanded');	
+				$nav.removeClass('is-expanding');				
+			});
+
+		}else { // is already expanded
+
+			$nav.addClass('is-collapsing');	
+			$nav.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function () {
+				$nav.removeClass('is-expanded is-collapsing');
+			});		
+			
+		}
+
 	});
 
 });
