@@ -182,21 +182,13 @@ code, pre {
 }
 
 figure { 
-  // display: inline-block;
-  // padding: 1em 0em 1em 0em;
   margin-left: auto;
   margin-right: auto;
-
-  p {
-    color: black;
-    text-align: center;
-  }
 }
 
 figcaption { 
-  font-size: 1.3em;
-  color: black;
-  text-transform: uppercase;
+  font-family: 'lora', sans-serif;
+  text-transform: none;
   text-align: center;
 }
 
@@ -726,17 +718,17 @@ h3.order-heading {
     }
   }
 
-  figcaption { 
+  figcaption p { 
     // display: block;
     font-size: 1.3em;
     color: black;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: none;
+    font-family: 'lora';
   }
 
   .image-gallery {
     -webkit-flex-direction: row;
-
     flex-direction: row;
   }
 }
