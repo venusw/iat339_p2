@@ -171,6 +171,7 @@ code, pre {
 
 .image {
   width: 100%;
+  margin-bottom: 0px;
 }
 
 .images {
@@ -180,8 +181,8 @@ code, pre {
 }
 
 figure { 
-  display: inline-block;
-  padding: 1em 0em 1em 0em;
+  // display: inline-block;
+  // padding: 1em 0em 1em 0em;
   margin-left: auto;
   margin-right: auto;
 
@@ -192,7 +193,6 @@ figure {
 }
 
 figcaption { 
-  display: block;
   font-size: 1.3em;
   color: black;
   text-transform: uppercase;
@@ -200,9 +200,9 @@ figcaption {
 }
 
 .image-gallery a {
-  display: inline-block;
+  display: flex;
+  flex-directon: row;
   max-width: 400px;
-  // padding: 1em 1em 1em 1em;
 
   opacity: 1;
   -moz-transition: opacity .25s ease-in-out;
@@ -226,14 +226,6 @@ figcaption {
     }
 }
 
-.home-image-sub {
-  float:left;
-  max-width:200px;
-
-  p {
-    padding: 5em 5em 5em 5em;
-  }
-}
 
 // ABOUT
 
@@ -246,6 +238,32 @@ figcaption {
 
 .about-content{
   padding:2em;
+}
+
+// product catalogue 
+
+.download{
+  text-align: center;
+  padding: 1em 2em 1em 2em;
+  font-family: 'lora';
+  background-color: #f2f2f2;
+
+  button, input[type='catalogue'] {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  height: 3em;
+  padding: 0em 0em;
+  border: 0px;
+  border-radius: 3px;
+  background: #a7862e; 
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+button, input[type='catalogue']:hover, button, input[type='catalogue']:focus {
+  background-color: #666;
+}
 }
 
 // HEADER
@@ -670,6 +688,38 @@ h3.order-heading {
     border: 1px solid #999;
   }
 
+  // image
+  .image {
+  width: 100%;
+  margin-bottom: -10em;
+
+}
+
+  figure { 
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+      color: black;
+      text-align: center;
+    }
+  }
+
+  figcaption { 
+    // display: block;
+    font-size: 1.3em;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .image-gallery a {
+    display: flex;
+    flex-directon: column;
+    max-width: 400px;
+
+}
 }
 
 @media(min-width: $screen-md) {
