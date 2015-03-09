@@ -191,6 +191,7 @@ a.button:hover, a.button:focus {
   left: 0;
   right: 0;
   display: block;
+  width: 90%;
   max-width: 450px;
   padding: 1em;
   margin: 0 auto;
@@ -200,6 +201,11 @@ a.button:hover, a.button:focus {
   text-decoration: none;
   text-align: center;
   color: #000;
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: .25rem;
+  }
 
   &:before {
     content: '';
@@ -453,19 +459,14 @@ header {
   }
 
   nav a {
-    font-size: .9em;
     background-color: #F2F2F2;
-  }
-
-  nav a:hover, nav a:focus, .go-to-nav:hover, .go-to-nav:focus {
-    color: #a7862e;
   }
 
   .shopping-cart {
     max-width: 3.5em;
     text-indent: 56px; // hide the cart wording
     overflow: hidden;
-    background: transparent url('/image/shoppingcart.png') no-repeat center 9px;   
+    background: transparent url('../image/shoppingcart.png') no-repeat center 9px;   
     background-size: 40px; 
   }
 
@@ -890,11 +891,19 @@ h3.order-heading {
       margin: 0 .5em;
     }
 
+    a {
+      font-size: .9em;
+    }
+
     a.button {
       margin-top: .5em;
       padding: .5em .75em;
     }
 
+  }
+
+  nav a:hover, nav a:focus, .go-to-nav:hover, .go-to-nav:focus {
+    color: #a7862e;
   }
 
   #logo {
