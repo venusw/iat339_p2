@@ -3,87 +3,115 @@
   <head>
     <title>Sugar Craft – 12 Pack Macarons
     </title>
+    <base href="http://www.jonathink.com/sugarcraft/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:700,300,400" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic" rel="stylesheet" type="text/css">
   </head>
-  <body> 
-    <header>
-      <div id="logo"><img src="image/logo-small.png" alt="logo"></div><a href="#main-nav" class="go-to-nav">Menu</a>
-      <nav>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/products.html" class="current">Products</a></li>
-          <li><a href="/news.html">News</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li class="lrg-item"><a href="#" class="login-button">Log in / Sign up</a></li>
-          <li><a href="#" class="shopping-cart">Cart </a></li>
-        </ul>
-      </nav><a href="#" class="shopping-cart">Cart</a>
-    </header>
-    <div class="content"><img src="/image/large-box-curved-arrangement.jpg" class="image">
-      <h1 class="order-heading">12 Pack Macarons</h1>
-      <h2 class="order-heading">$22</h2>
-      <p>A dozen of your favourite seasonal flavours! Each macaron is carefully made with the freshest local ingredients. Take home an assorted dozen or 12 of your favourite flavour!  </p>
-      <h3 class="order-heading">Seasonal flavours</h3>
-      <form method="link" action="cart.html" class="order-form">
-        <ul class="list-header">
-          <li>Seasonal flavours </li>
-          <li>Quantity</li>
-        </ul>
-        <ul class="order-list">
-          <li>
-            <div class="item-row">
-              <label>Matcha Frappe</label>
-              <div class="input-quantity">
-                <button class="counter counter-decrease">&minus;</button>
-                <input type="number" value="0" min="0" class="quantity">
-                <button class="counter counter-increase">+</button>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="item-row">
-              <label>Earl Grey</label>
-              <div class="input-quantity">
-                <button class="counter counter-decrease">&minus;</button>
-                <input type="number" value="0" min="0" class="quantity">
-                <button class="counter counter-increase">+</button>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="item-row">
-              <label>Vanilla Bean</label>
-              <div class="input-quantity">
-                <button class="counter counter-decrease">&minus;</button>
-                <input type="number" value="0" min="0" class="quantity">
-                <button class="counter counter-increase">+</button>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="item-row">
-              <label>Dark Mocha</label>
-              <div class="input-quantity">
-                <button class="counter counter-decreasee">&minus;</button>
-                <input type="number" value="0" min="0" class="quantity">
-                <button type="submit" class="counter counter-increase">+</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <p class="order-total">Subtotal: <span>0</span></p>
-        <div class="item-row next-step">
-          <input type="submit" value="Add to Order">
-        </div>
-      </form>
+  <body>
+    <div class="header-wrapper">
+      <header class="l-basic">
+        <div id="logo"><img src="image/logo-small.png" alt="logo"></div><a href="#main-nav" class="go-to-nav">Menu</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="current">Products</a></li>
+            <li><a href="news.html">News & Creations</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#" class="login-button">Log in / Sign up</a></li>
+            <li><a href="#" class="shopping-cart">Cart </a></li>
+          </ul>
+        </nav><a href="#" class="shopping-cart">Cart</a>
+      </header>
     </div>
-    <footer>Copyright © SugarCraft 2015
-    </footer>
-    <script src="/js/jquery-2.1.3.min.js" type="text/javascript"></script>
-    <script src="/js/script.js" type="text/javascript"></script>
+    <div class="content">
+      <div class="main-product-image"><img src="image/large-box-curved-arrangement-s.jpg" class="image"></div>
+      <div class="l-reading section product-page">
+        <h1>12 Pack Macarons</h1>
+        <h2 class="price">$22</h2>
+        <p>A dozen of your favourite seasonal flavours! Each macaron is carefully made with the freshest local ingredients. Take home an assorted dozen or 12 of your favourite flavour!  </p>
+        <form method="link" action="cart.html" class="order-form">
+          <ul class="list-header">
+            <li>Seasonal flavours </li>
+            <li>Quantity</li>
+          </ul>
+          <ul class="order-list">
+            <li>
+              <div class="item-row">
+                <div class="macaron-flavour"><img src="image/matcha-frappe-flavour.jpg" class="image"></div>
+                <label>Matcha Frappe<span class="input-description">King of green tea</span></label>
+                <div class="input-quantity">
+                  <input type="number" value="0" min="0" class="quantity">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-row">
+                <div class="macaron-flavour"><img src="image/earl-grey-flavour.jpg" class="image"></div>
+                <label>Earl Grey<span class="input-description">Smooth citrus goodness</span></label>
+                <div class="input-quantity">
+                  <input type="number" value="0" min="0" class="quantity">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-row">
+                <div class="macaron-flavour"><img src="image/vanilla-bean-flavour.jpg" class="image"></div>
+                <label>Vanilla Bean<span class="input-description">Clean and classic</span></label>
+                <div class="input-quantity">
+                  <input type="number" value="0" min="0" class="quantity">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-row">
+                <div class="macaron-flavour"><img src="image/dark-mocha-flavour.jpg" class="image"></div>
+                <label>Dark Mocha<span class="input-description">Go-to choice for chocoholics</span></label>
+                <div class="input-quantity">
+                  <input type="number" value="0" min="0" class="quantity">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-row">
+                <div class="macaron-flavour"><img src="image/assorted-flavour.jpg" style="-webkit-transform: rotate(45deg); transform: rotate(45deg);" class="image"></div>
+                <label>Assorted<span class="input-description">For those that crave variety</span></label>
+                <div class="input-quantity">
+                  <input type="number" value="0" min="0" class="quantity">
+                </div>
+              </div>
+            </li>
+          </ul>
+          <p class="order-total">Subtotal: <span>0</span></p>
+          <div class="item-row next-step">
+            <input type="submit" value="Add to Order" class="button-main">
+          </div>
+        </form>
+      </div>
+      <div class="l-wrapper">
+        <div class="l-reading">
+          <h3 class="section-heading">Related products</h3>
+          <ul class="related-products list"> 
+            <li><img src="image/macaron-singles-thumbnail.jpg">
+              <p>Macaron Singles<span class="price">$1.75</span></p>
+            </li>
+            <li> <img src="image/party-favours-thumbnail.jpg">
+              <p>Party Favours<span class="price">$8.00</span></p>
+            </li>
+          </ul>
+          <h3 class="section-heading">Custom Order</h3>
+          <p>Want personalized desserts for your event? Fill out the <a href='#' class='main-link'>Custom order form</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wrapper">
+      <footer>
+        <div id="footer-left">Connect with us!<img src="image/email.png" class="contact-logo"><img src="image/facebook.png" class="contact-logo"><img src="image/twitter.png" class="contact-logo">Copyright © SugarCraft 2015</div>
+      </footer>
+    </div>
+    <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="js/script-min.js" type="text/javascript"></script>
   </body>
 </html>
