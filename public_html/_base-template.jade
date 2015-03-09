@@ -19,35 +19,37 @@ html(lang='en')
 		link(href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css')
 		link(href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css')
 
-	body 
-		header
-			//- logo and nav
-			div(id='logo')
-				img(src='image/logo-small.png' alt='logo')
+	body
+		.header-wrapper
+			header.l-basic
+				//- logo and nav
+				div(id='logo')
+					img(src='image/logo-small.png' alt='logo')
 
-			a.go-to-nav(href='#main-nav') Menu
-			nav
-				ul
-					block current-page
-					li: a(href='/index.html' class=home ? 'current' : '') Home
-					li: a(href='/products.html' class=products ? 'current' : '') Products
-					li: a(href='/news.html' class=news ? 'current' : '') News
-					li: a(href='/about.html' class=about ? 'current' : '') About
-					li.lrg-item: a(href='#' class='login-button') Log in / Sign up
-					li: a.shopping-cart(href='#') Cart 
-			a.shopping-cart(href='#') Cart
+				a.go-to-nav(href='#main-nav') Menu
+				nav
+					ul
+						block current-page
+						li: a(href='/index.html' class=home ? 'current' : '') Home
+						li: a(href='/products.html' class=products ? 'current' : '') Products
+						li: a(href='/news.html' class=news ? 'current' : '') News
+						li: a(href='/about.html' class=about ? 'current' : '') About
+						li: a(href='#' class='login-button') Log in / Sign up
+						li: a.shopping-cart(href='#') Cart 
+				a.shopping-cart(href='#') Cart
 
 		.content
 			block content
 
-		footer
-			//- include footer here
-			div(id='footer-left')
-				| Connect with us!
-				img(src='/image/email.png' class='contact-logo')
-				img(src='/image/facebook.png' class='contact-logo')
-				img(src='/image/twitter.png' class='contact-logo')
-				| Copyright © SugarCraft 2015
+		.footer-wrapper
+			footer
+				//- include footer here
+				div(id='footer-left')
+					| Connect with us!
+					img(src='/image/email.png' class='contact-logo')
+					img(src='/image/facebook.png' class='contact-logo')
+					img(src='/image/twitter.png' class='contact-logo')
+					| Copyright © SugarCraft 2015
 
 		//- include scripts here
 		script(src='/js/jquery-2.1.3.min.js' type='text/javascript')
