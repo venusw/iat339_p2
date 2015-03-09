@@ -439,7 +439,7 @@ button {
   box-sizing: border-box; }
 
 body {
-  font-family: normal 100% 'Lora', serif;
+  font: normal 400 100% 'Lora', serif;
   line-height: 1.5;
   color: #333; }
 
