@@ -17,53 +17,72 @@ block content
 
 	//- content goes here
 	
-	img.image(src='/image/large-box-curved-arrangement.jpg')
+	.main-product-image: img.image(src='/image/large-box-curved-arrangement-s.jpg')
 
-	h1.order-heading 12 Pack Macarons
-	h2.order-heading $22
-	p A dozen of your favourite seasonal flavours! Each macaron is carefully made with the freshest local ingredients. Take home an assorted dozen or 12 of your favourite flavour!  
+	.l-reading.section.product-page
+		h1 12 Pack Macarons
+		h2.price $22
+		p A dozen of your favourite seasonal flavours! Each macaron is carefully made with the freshest local ingredients. Take home an assorted dozen or 12 of your favourite flavour!  
 
+		form.order-form(method='link' action='cart.html')
 
-	h3.order-heading Seasonal flavours
-
-	form.order-form(method='link' action='cart.html')
-
-		ul.list-header
-			li Seasonal flavours 
-			li Quantity
-
-		
-		ul.order-list
-			li: .item-row
-				label Matcha Frappe
-				.input-quantity
-					button(class='counter counter-decrease') &minus;
-					input(type='number' class='quantity' value='0' min='0')
-					button(class='counter counter-increase') +
+			ul.list-header
+				li Seasonal flavours 
+				li Quantity
 			
-			li: .item-row
-				label Earl Grey
-				.input-quantity
-					button(class='counter counter-decrease') &minus;
-					input(type='number' class='quantity' value='0' min='0')
-					button(class='counter counter-increase') +
+			ul.order-list
+				li: .item-row
+					.macaron-flavour: img.image(src='/image/matcha-frappe-flavour.jpg')
+					label Matcha Frappe
+						span.input-description King of green tea
+					.input-quantity
+						input(type='number' class='quantity' value='0' min='0')
+				
+				li: .item-row
+					.macaron-flavour: img.image(src='/image/earl-grey-flavour.jpg')
+					label Earl Grey
+						span.input-description Smooth citrus goodness
+					.input-quantity
+						input(type='number' class='quantity' value='0' min='0')
+				
+				li: .item-row
+					.macaron-flavour: img.image(src='/image/vanilla-bean-flavour.jpg')
+					label Vanilla Bean
+						span.input-description Clean and classic
+					.input-quantity
+						input(type='number' class='quantity' value='0' min='0')
 			
-			li: .item-row
-				label Vanilla Bean
-				.input-quantity
-					button(class='counter counter-decrease') &minus;
-					input(type='number' class='quantity' value='0' min='0')
-					button(class='counter counter-increase') +
-		
-			li: .item-row
-				label Dark Mocha
-				.input-quantity
-					button(class='counter counter-decreasee') &minus;
-					input(type='number' class='quantity' value='0' min='0')
-					button(class='counter counter-increase' type='submit') +
+				li: .item-row
+					.macaron-flavour: img.image(src='/image/dark-mocha-flavour.jpg')
+					label Dark Mocha
+						span.input-description Go-to choice for chocoholics
+					.input-quantity
+						input(type='number' class='quantity' value='0' min='0')
 
-		
-		p.order-total Subtotal: <span>0</span>
+				li: .item-row
+					.macaron-flavour: img.image(src='/image/assorted-flavour.jpg' style='-webkit-transform: rotate(45deg); transform: rotate(45deg);')
+					label Assorted
+						span.input-description For those that crave variety
+					.input-quantity
+						input(type='number' class='quantity' value='0' min='0')			
 
-		div.item-row.next-step
-			input(type='submit' value='Add to Order') 
+			p.order-total Subtotal: <span>0</span>
+
+			div.item-row.next-step
+				input(type='submit' class='button-main' value='Add to Order') 
+
+	.l-wrapper
+		.l-reading
+			h3.section-heading Related products
+			ul.related-products.list 
+				li
+					img(src='/image/macaron-singles-thumbnail.jpg')
+					p Macaron Singles
+						span.price $1.75
+				li 
+					img(src='/image/party-favours-thumbnail.jpg')
+					p Party Favours
+						span.price $8.00
+
+			h3.section-heading Custom Order
+			p Want personalized desserts for your event? Fill out the <a href='#' class='main-link'>Custom order form</a>
