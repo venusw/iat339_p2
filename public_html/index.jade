@@ -7,19 +7,18 @@ block current-page
 	- var home = true
 
 block content
-	div.home-image 
-		a(href='/products.html')
-			img(src='image/largeboxmacaron.jpg' alt='macaron' class='image')
+	div.card-wrapper
+		img(src='image/largeboxmacaron.jpg' alt='macaron' class='image')
+		a.card-link(href='/products.html')
 			h1 Spring Cherry Blossoms
 			p Celebrate Vancouver’s annual cherry blossom festival with our themed macarons
 
 	div.home-section-2
-
 		img(src='image/dessert-sketch.png' alt='assorted' class='home-image-sub image')
 		h2 Desserts that Satisfy
 		p Hand-crafted goods made with fresh seasonal ingredients. You’re sure to find something that delights your tastebuds.
 
-	
+
 	div.download
 		input(type='catalogue' value='View Products')
 
