@@ -55,7 +55,7 @@ $screen-lg: 1200px;
 }
 
 body {
-  font-family: normal 100% 'Open Sans', sans-serif;
+  font-family: normal 100% 'Lora', serif;
   line-height: 1.5;
   padding: 1rem;
 }
@@ -203,39 +203,46 @@ figcaption {
 
 header {
   display: flex;
-  border: 0px solid #CCC;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #a7862e;
+
 
   #logo {
     float: left;
   }
 
   img {
-    max-width: 50px;
+    max-width: 150px;
   }
 
   nav a, .go-to-nav, .shopping-cart {
     display: block;
     padding: 1em 1.25em;
     color: #000;
-    text-transform: uppercase;
+    font-family: lora; 
+    text-transform: none;
     text-decoration: none;
     text-align: center;
-    background: #fff;
+    background: transparent;
 
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
 
   nav a:hover, nav a:focus, .go-to-nav:hover, .go-to-nav:focus {
-    color: #3ca39b;
+    color: #a7862e;
   }
 
   .shopping-cart {
     max-width: 3.5em;
     text-indent: 56px; // hide the cart wording
     overflow: hidden;
-    background: transparent url('/image/shopping-cart.png') no-repeat center -2px;    
-    background-size: 56px; 
+    background: transparent url('/image/shoppingcart.png') no-repeat center 6px;   
+    background-size: 40px; 
+  }
+
+  .login-button {
+    border: 1px solid #999;
   }
 
 }
