@@ -17,20 +17,23 @@ block content
 	//- content goes here
 
 	div.image-gallery
-		a(href='/macaron.html')
+		div.card-wrapper
 			img(src='/image/productmacaron.png' alt='macaron' class='image')
-			h1 Macarons
-			p View Details
-				
-		a(href='#')
+			a.card-link(href='/macaron.html')
+				h1 Macarons
+				p View Details
+		
+		div.card-wrapper				
 			img(src='/image/productcupcake.png' alt='cupcake' class='image')
-			h1 Cupcakes
-			p View Details
-			
-		a(href='#')
+			a.card-link(href='#')
+				h1 Cupcakes
+				p View Details
+	
+		div.card-wrapper		
 			img(src='/image/productcookie.png' alt='custom cookie' class='image')
-			h1 custom
-			p View Details
+			a.card-link(href='#')
+				h1 Custom
+				p View Details
 
 	div.download
 		h2 Product Catalogue

@@ -180,6 +180,39 @@ a.button:hover, a.button:focus {
   white-space: nowrap;
 }
 
+.card-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.card-link {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: block;
+  max-width: 450px;
+  padding: 1em;
+  margin: 0 auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, .8);
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 1px solid #FFF;
+  }
+
+}
+
 code, pre {
   display: block;
   background-color: #EEE;
@@ -187,10 +220,6 @@ code, pre {
   margin: 0;
   margin-bottom: 1em;
 }
-
-// .content {
-//   margin-bottom: 3em;
-// }
 
 .list {
   padding-left: 0;
@@ -261,8 +290,9 @@ figcaption {
 
 .image-gallery {
   display: -webkit-flex;
-    -webkit-flex-direction: column;
+  -webkit-flex-direction: column;
 
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -423,6 +453,7 @@ header {
   }
 
   nav a {
+    font-size: .9em;
     background-color: #F2F2F2;
   }
 
@@ -879,6 +910,11 @@ h3.order-heading {
     padding: .25em .75em;
     margin-top: .75em;
   }
+
+  .content {
+    border-top: 1px solid transparent; // fixes issue with FF
+  }
+
 
   // image
   .image {
