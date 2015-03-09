@@ -288,14 +288,23 @@ nav {
 // FOOTER
 
 footer {
-  background-color: #ffffff;
+
+  .footer-left{
+    float: left;
+
+}
+  .contact-logo {
+    max-width: 20px;
+
+}
+  display: flex;
+  background-color: #605e5e;
   font-size:.8rem;
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'lora', serif;
   font-weight: 300;
-  color:#666;
-  text-align:center;
-  padding:10px;
+  color: #999;
+  padding:15px;
 }
 
 // FORM
