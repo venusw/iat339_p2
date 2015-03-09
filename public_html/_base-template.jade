@@ -17,12 +17,13 @@ html(lang='en')
 
 		//- web font include here
 		link(href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css')
-	
+		link(href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css')
+
 	body 
 		header
 			//- logo and nav
 			div(id='logo')
-				img(src='/image/sugar-logo.jpeg' alt='logo')
+				img(src='image/logo-small.png' alt='logo')
 
 			a.go-to-nav(href='#main-nav') Menu
 			nav
@@ -32,7 +33,7 @@ html(lang='en')
 					li: a(href='/products.html' class=products ? 'current' : '') Products
 					li: a(href='/news.html' class=news ? 'current' : '') News
 					li: a(href='/about.html' class=about ? 'current' : '') About
-					li.lrg-item: a(href='#' class='button') Log in / Sign up
+					li.lrg-item: a(href='#' class='login-button') Log in / Sign up
 					li: a.shopping-cart(href='#') Cart 
 			a.shopping-cart(href='#') Cart
 
