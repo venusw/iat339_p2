@@ -170,20 +170,20 @@ a.htext {
   text-decoration: none;
 }
 
-a.button {
-  display: inline-block;
-  padding: 0.5em 0.75em;
-  color: #ffffff;
-  background-color: #3ca39b;
-  border-radius: 0em;
-  text-decoration: none;
-  text-transform: uppercase;
-  -webkit-transition: background-color 0.5s ease-out;
-  transition: background-color 0.5s ease-out;
-}
-a.button:hover, a.button:focus {
-  background-color: #435b59;
-}
+// a.button {
+//   display: inline-block;
+//   padding: 0.5em 0.75em;
+//   color: #ffffff;
+//   background-color: #3ca39b;
+//   border-radius: 0em;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   -webkit-transition: background-color 0.5s ease-out;
+//   transition: background-color 0.5s ease-out;
+// }
+// a.button:hover, a.button:focus {
+//   background-color: #435b59;
+// }
 
 .main-link {
   color: #000;
@@ -357,14 +357,22 @@ figcaption {
 }
 // product catalogue 
 
-.button-main {
+.button {
+  display: inline-block;
+  font-family: sans-serif;
+  text-decoration: none;
   color: #FFF;
-  background-color: $brand-gold;
-  padding: 1em 2em;
+  padding: .5em 1em;
   border-radius: 3px;
-  text-transform: uppercase;
-  font-family: sans-serif; 
-  font-weight: bold;
+}
+
+.button-main {
+  background-color: $brand-gold;
+}
+
+.button-secondary {
+  text-shadow: 0 0 1px #000;
+  background-color: $brand-gold-light;
 }
 
 .download{
@@ -394,15 +402,24 @@ button, input[type='catalogue']:hover, button, input[type='catalogue']:focus {
 
 //INDEX
 
-.home-section-2 {
+.home-section-2-wrapper {
   background-color: #f2f2f2;
-  text-align: center;
-  padding: 2em 2em 2em 2em;
-  font-family: 'lora', sans-serif;
 }
+
+.home-section-2 {
+  text-align: center;
+  padding: 4em 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.home-section-2 h2 {
+  margin: 0 0 .5rem;
+}
+
 .home-image-sub {
-  padding: 4em 2em 0em 2em;
-  max-width: 300px;
+  max-width: 260px;
 }
 
 // INDIVIDUAL PRODUCT PAGE
@@ -458,13 +475,13 @@ header {
   nav a, .go-to-nav, .shopping-cart {
     display: block;
     padding: 1em 1.25em;
-    color: #000;
+    color: #444;
     text-transform: none;
     text-decoration: none;
     text-align: center;
     background: transparent;
     font-style: italic;
-    
+
     -webkit-transition: background-color 0.5s;
     transition: background-color 0.5s;
   }
@@ -474,11 +491,12 @@ header {
   }
 
   .shopping-cart {
-    max-width: 3.5em;
+    max-width: 3em;
     text-indent: 56px; // hide the cart wording
     overflow: hidden;
-    background: transparent url('../image/shoppingcart.png') no-repeat center 9px;   
+    background: transparent url('../image/shoppingcart.png') no-repeat 6px 9px;   
     background-size: 40px; 
+    opacity: .8;
   }
 
 }
@@ -514,11 +532,11 @@ nav {
     display: none;
   }
 
-  a.button {
-    display: block;
-    margin: 0 auto;
-    padding: 1em 0;
-  }
+  // a.button {
+  //   display: block;
+  //   margin: 0 auto;
+  //   padding: 1em 0;
+  // }
 
 }
 
@@ -976,7 +994,7 @@ h3.order-heading {
       width: 610px;
       display: flex;
       justify-content: flex-end;
-      margin-right: 1em;
+      margin-right: 0;
       margin-left: auto;
       padding: 0;
       border: none;
@@ -999,10 +1017,10 @@ h3.order-heading {
       font-size: .9em;
     }
 
-    a.button {
-      margin-top: .5em;
-      padding: .5em .75em;
-    }
+    // a.button {
+    //   margin-top: .5em;
+    //   padding: .5em .75em;
+    // }
 
   }
 
@@ -1017,7 +1035,7 @@ h3.order-heading {
 
   header .shopping-cart {
     margin-left: .75em;
-    background-position: 7px 
+    background-position: 4px 7px 
   }
 
   .login-button {
