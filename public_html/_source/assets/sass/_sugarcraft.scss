@@ -22,6 +22,11 @@ button {
   border: none;
 }
 
+// get rid fo the tap flash
+.go-to-nav {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 // VARIABLES AND PLACEHOLDERS
 
 $brand-gold: #a7862e;
@@ -89,13 +94,13 @@ $screen-lg: 1200px;
 }
 
 @-webkit-keyframes tilt-down {
-  0% {-webkit-transform: rotateX(0);}
+  0% {-webkit-transform: rotateX(0); opacity: 1;}
   25% {opacity: 1;}
   100% {-webkit-transform: rotateX(-10deg); opacity: 0;}
 } 
 
 @keyframes tilt-down {
-  0% {transform: rotateX(0);}
+  0% {transform: rotateX(0); opacity: 1;}
   25% {opacity: 1;}
   100% {transform: rotateX(-10deg); opacity: 0;}
 } 
@@ -431,7 +436,7 @@ h2.price {
 
 .header-wrapper {
   background-color: #f2f2f2;
-  border-bottom: 2px solid #a7862e;
+  border-bottom: 4px solid #a7862e;
 }
 
 header {
@@ -454,7 +459,6 @@ header {
     display: block;
     padding: 1em 1.25em;
     color: #000;
-    font-family: lora; 
     text-transform: none;
     text-decoration: none;
     text-align: center;
@@ -484,7 +488,7 @@ nav {
   // width: 100%;
   position: absolute;
   z-index: 999;
-  top: 58px;
+  top: 60px;
   left: auto;
   right: 0em;
   perspective: 400px;
@@ -492,7 +496,7 @@ nav {
   ul {
     display: none;
     padding-left: 0;
-    width: 12.6em;
+    width: 14.6em;
     // width: 15em;
     border: 1px solid #BBB;
     border-top: none;
@@ -753,7 +757,7 @@ select {
 }
 
 input.quantity {
-  // line-height: normal;
+    // line-height: normal;
   font-family: sans-serif;
   display: inline-block;
   width: 2.5em;
@@ -961,6 +965,7 @@ h3.order-heading {
   }
 
   nav {
+    padding: 0.5em 0;
     position: static;
     
     ul {
@@ -1006,16 +1011,18 @@ h3.order-heading {
 
   #logo {
     float: left;
+    margin-top: .25em;
   }
 
-  .shopping-cart {
+  header .shopping-cart {
     margin-left: .75em;
+    background-position: 7px 
   }
 
   .login-button {
-    border: 1px solid #999;
-    padding: .25em .75em;
-    margin-top: .75em;
+    border: 2px solid #DDD;
+    padding: .5em 1em;
+    margin-top: .35em;
   }
 
   .content {
