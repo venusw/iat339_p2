@@ -1,7 +1,7 @@
-// when menu is clicked, add is-open class. When clicked again, remove class
-
 $(function() {
 
+	// when menu is clicked, add is-open class. When clicked again, remove class
+	
 	$('.go-to-nav').click(function() {
 		var $nav = $('nav ul');
 		var state = $nav.hasClass('is-expanded');
