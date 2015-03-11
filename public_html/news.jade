@@ -16,32 +16,43 @@ block title
 block content
 	//- content goes here
 
-	.l-reading
+	.l-basic
 		h1 News & Creations
 
-		ul.list.news-creations
+		.filter
+			span.list-header.list-header-filter Filters:
+			ul.list.tags
+				li: a.current(href='#') All
+				li: a(href='#') Cupcakes
+				li: a(href='#') Macarons
+				li: a(href='#') Cakes
+				li: a(href='#') Cookies
+				li: a(href='#') Weddings & Events
+
+		#new-creations-1.js-masonry.news-creations.list(data-masonry-options='{ "columnWidth": "li", "itemSelector": "li", "transitionDuration": "0", "gutter": ".gutter-sizer"}')
+			.gutter-sizer
 			li
-				img(src='')
+				img(src='image/news-item-1.jpg')
 				p Happy 2nd birthday Epicentr!
 				span.date February 26, 2014
-				span.share Share
+				a.share(href='#') Share
 			li
-				img(src='')
+				img(src='image/news-item-2.jpg')
 				p Celebrating National Cupcake Day! Have you had one today yet? 
 				span.date February 23, 2014
-				span.share Share
+				a.share(href='#') Share
 			li
-				img(src='')
+				img(src='image/news-item-3.jpg')
 				p May this year bring you and your family lots of luck and good fortune
 				span.date February 19, 2014
-				span.share Share
+				a.share(href='#') Share
 			li
-				img(src='')
-				p What's inside our Macarons? Fresh strawberries nested in a ring of white chocolate infused buttercream. Check out our Instagram post from yesterday to see how you can win some FREE Macarons! 
-				span.date February 12, 2014
-				span.share Share	
-			li
-				img(src='')
+				img(src='image/news-item-4.jpg')
 				p A baby pink cake for an elegant ladies' debut! Happy 18th Birthday Christine
 				span.date January 10, 2014
-				span.share Share
+				a.share(href='#') Share
+			li
+				img(src='image/news-item-5.jpg')
+				p What's inside our Macarons? Fresh strawberries nested in a ring of white chocolate infused buttercream. Check out our Instagram post from yesterday to see how you can win some FREE Macarons! 
+				span.date February 12, 2014
+				a.share(href='#') Share	
