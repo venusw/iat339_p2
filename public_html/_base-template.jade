@@ -45,14 +45,14 @@ html(lang='en')
 			block content
 
 		.footer-wrapper
-			footer
-				//- include footer here
-				div(id='footer-left')
-					| Connect with us!
-					img(src='image/email.png' class='contact-logo')
-					img(src='image/facebook.png' class='contact-logo')
-					img(src='image/twitter.png' class='contact-logo')
-					| Copyright © SugarCraft 2015
+			footer.l-basic
+				p
+					span Connect with us!
+					span.contact-links
+						img(src='image/email.png' class='contact-logo')
+						img(src='image/facebook.png' class='contact-logo')
+						img(src='image/twitter.png' class='contact-logo')
+					span.copyright Copyright © SugarCraft 2015
 
 		//- include scripts here
 		script(src='js/jquery-2.1.3.min.js' type='text/javascript')

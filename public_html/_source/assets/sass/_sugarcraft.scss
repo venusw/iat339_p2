@@ -419,7 +419,7 @@ button, input[type='catalogue']:hover, button, input[type='catalogue']:focus {
 }
 
 .home-image-sub {
-  max-width: 260px;
+  max-width: 220px;
 }
 
 // INDIVIDUAL PRODUCT PAGE
@@ -566,27 +566,48 @@ nav {
 .footer-wrapper {
   background-color: #605e5e;
   border-top: 4px solid $brand-silver;
-  padding: 1em;
+  padding: 1em 0 4px;
+  box-shadow: 0px 500px 0px 500px #605e5e; // expands background-color;
 }
 
 footer {
-  display: flex;
   font-size:.9rem;
   text-decoration: none;
-  font-family: 'lora', serif;
-  font-weight: 300;
   color: #999;
 
-  .footer-left{
-    float: left;
-    display: inline-block;
+  p {
+    text-align: center;
+    margin-bottom: 0;
+    @extend %clear;
+  }
 
+  span {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .contact-links {
+    width: 116px;
+    margin-left: auto;
+    margin-right: auto;
+    @extend %clear;
   }
 
   .contact-logo {
-    width: 100%;
-    max-width: 40px;
-    padding-left: 1em;
+    // position: relative;
+    // top: 10px;
+    display: block;
+    float: left;
+    max-width: 28px;
+    margin-left: 1em;
+  }
+
+  .contact-logo:first-child {
+    margin-left: 0;
+  }
+
+  .copyright {
+    white-space: nowrap;
   }
   
 }
@@ -915,7 +936,7 @@ h3.order-heading {
 
 @media(min-width: $screen-xs) {
 
-  .l-reading, footer {
+  .l-reading {
     padding: 0;
     max-width: $screen-xs;
     margin-right: auto;
@@ -1100,8 +1121,21 @@ h3.order-heading {
     width: 33.33%;
   }
 
-  // ORDER PAGE
+  footer p {
+    text-align: left;
+  }
 
+  footer span {
+    float: left;
+  }
+
+  footer .contact-links {
+    margin: -.3em 0 0 1em;    
+  }
+
+  footer .copyright {
+    float: right;
+  }
 
 }
 
