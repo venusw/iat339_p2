@@ -955,6 +955,14 @@ h3.order-heading {
     flex-direction: row;
   }
 
+  .image-gallery-3-col {
+    flex-wrap: wrap;
+  }
+
+  .image-gallery-3-col .card-wrapper {
+    width: 33.33%;
+  }
+
   // ORDER PAGE
 
 
