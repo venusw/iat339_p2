@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> 
   <head>
+    <title>Sugar Craft – Styleguide
+    </title>
     <meta charset="utf-8">
-    <title>Style Guide Template</title>
-    <link href="css/main.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700,300,400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <div class="l-large l-basic">
     <h1>Sugar Craft Style Guide</h1>
     <p>A template for Sugar Craft branding.</p>
     <!-- Try to ensure that each element has its own portion of the page -->
@@ -35,13 +39,13 @@
     </section>
 
 <section id="buttons">
-      <h2>Default Button Style</h2>
+      <h2>Main Button Style</h2>
       <h3>CSS selector:</h3>
-      <p>'a.button'</p>
+      <p>'.button and .button-main'</p>
       <h3>Sample code:</h3>
-      <code>&lt;a href="#" class="button"&gt;Default Button&lt;/a&gt;</code>
+      <code>&lt;a href="#" class="button button-main"&gt;Default Button&lt;/a&gt;</code>
       <h3>Rendered element:</h3>
-      <a class="button" href="#">DEFAULT BUTTON</a>
+      <a class="button button-main" href="#">Button</a>
     </section>
 
 <section id="form">
@@ -100,21 +104,30 @@
 
 
     <h3>Heading</h3>
-    <header>
-      <div id='logo'><img src='image/sugar-logo.jpeg' alt='logo'></div>
-      <nav>
-        <ul>
-          <li><a href='#'>Home</a></li>
-          <li><a href='#'>Products</a></li>
-          <li><a href='#'>About</a></li>
-        </ul>
-      </nav>
-    </header>
-
+      <div class="header-wrapper">
+        <header class="l-basic">
+          <div id="logo"><img src="image/logo-small.png" alt="logo"></div><a class="go-to-nav">Menu</a>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html" class="current">Products</a></li>
+              <li><a href="news.html">News & Creations</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#" class="login-button">Log in / Sign up</a></li>
+              <li><a href="#" class="shopping-cart">Cart </a></li>
+            </ul>
+          </nav><a href="#" class="shopping-cart">Cart</a>
+        </header>
+      </div>
+      
     <h3>Footer</h3>
-    <footer>
-      Copyright © SugarCraft 2015
-    </footer>
+    <div class="footer-wrapper">
+      <footer class="l-basic">
+        <p><span>Connect with us!</span><span class="contact-links"><img src="image/email.png" class="contact-logo"><img src="image/facebook.png" class="contact-logo"><img src="image/twitter.png" class="contact-logo"></span><span class="copyright">Copyright © SugarCraft 2015</span></p>
+      </footer>
+    </div>
+
+  </div>
 
   </body>
 </html>
