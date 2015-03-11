@@ -693,7 +693,7 @@ label {
 }
 
 .filter {
-  padding-bottom: 2em;
+  padding-bottom: 1.5em;
   border-bottom: 3px solid #DDD;
   margin-bottom: 2em;
   @extend %clear;
@@ -1114,16 +1114,17 @@ h3.order-heading {
 
 }
 
-@media(min-width: $screen-md) {
-
-}
-
 .style-guide-icon {
   padding: 2em;
   background-color: #999;
 }
 
 @media(max-width: 657px) {
+
+  .news-creations {
+    position: static !important;
+  }
+
   .news-creations li {
     width: 100%;
     position: static !important;
@@ -1131,6 +1132,7 @@ h3.order-heading {
 }
 
 @media(min-width: 658px) and (max-width: 991px) {
+
   .news-creations {
     width: 626px;
     margin-left: auto;
