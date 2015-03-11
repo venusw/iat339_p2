@@ -12,7 +12,7 @@
   <body>
     <div class="header-wrapper">
       <header class="l-basic">
-        <div id="logo"><img src="image/logo-small.png" alt="logo"></div><a href="#main-nav" class="go-to-nav">Menu</a>
+        <div id="logo"><img src="image/logo-small.png" alt="logo"></div><a class="go-to-nav">Menu</a>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -26,25 +26,36 @@
       </header>
     </div>
     <div class="content">
-      <div class="l-reading">
+      <div class="l-basic">
         <h1>News & Creations</h1>
-        <ul class="list news-creations">
-          <li><img src="">
-            <p>Happy 2nd birthday Epicentr!</p><span class="date">February 26, 2014</span><span class="share">Share</span>
+        <div class="filter"><span class="list-header list-header-filter">Filters:</span>
+          <ul class="list tags">
+            <li><a href="#" class="current">All</a></li>
+            <li><a href="#">Cupcakes</a></li>
+            <li><a href="#">Macarons</a></li>
+            <li><a href="#">Cakes</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Weddings & Events</a></li>
+          </ul>
+        </div>
+        <div id="new-creations-1" data-masonry-options="{ &quot;columnWidth&quot;: &quot;li&quot;, &quot;itemSelector&quot;: &quot;li&quot;, &quot;transitionDuration&quot;: &quot;0&quot;, &quot;gutter&quot;: &quot;.gutter-sizer&quot;}" class="js-masonry news-creations list">
+          <div class="gutter-sizer"></div>
+          <li><img src="image/news-item-1.jpg">
+            <p>Happy 2nd birthday Epicentr!</p><span class="date">February 26, 2014</span><a href="#" class="share">Share</a>
           </li>
-          <li><img src="">
-            <p>Celebrating National Cupcake Day! Have you had one today yet? </p><span class="date">February 23, 2014</span><span class="share">Share</span>
+          <li><img src="image/news-item-2.jpg">
+            <p>Celebrating National Cupcake Day! Have you had one today yet? </p><span class="date">February 23, 2014</span><a href="#" class="share">Share</a>
           </li>
-          <li><img src="">
-            <p>May this year bring you and your family lots of luck and good fortune</p><span class="date">February 19, 2014</span><span class="share">Share</span>
+          <li><img src="image/news-item-3.jpg">
+            <p>May this year bring you and your family lots of luck and good fortune</p><span class="date">February 19, 2014</span><a href="#" class="share">Share</a>
           </li>
-          <li><img src="">
-            <p>What's inside our Macarons? Fresh strawberries nested in a ring of white chocolate infused buttercream. Check out our Instagram post from yesterday to see how you can win some FREE Macarons! </p><span class="date">February 12, 2014</span><span class="share">Share	</span>
+          <li><img src="image/news-item-4.jpg">
+            <p>A baby pink cake for an elegant ladies' debut! Happy 18th Birthday Christine</p><span class="date">January 10, 2014</span><a href="#" class="share">Share</a>
           </li>
-          <li><img src="">
-            <p>A baby pink cake for an elegant ladies' debut! Happy 18th Birthday Christine</p><span class="date">January 10, 2014</span><span class="share">Share</span>
+          <li><img src="image/news-item-5.jpg">
+            <p>What's inside our Macarons? Fresh strawberries nested in a ring of white chocolate infused buttercream. Check out our Instagram post from yesterday to see how you can win some FREE Macarons! </p><span class="date">February 12, 2014</span><a href="#" class="share">Share	</a>
           </li>
-        </ul>
+        </div>
       </div>
     </div>
     <div class="footer-wrapper">
@@ -53,6 +64,8 @@
       </footer>
     </div>
     <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>
     <script src="js/script-min.js" type="text/javascript"></script>
   </body>
 </html>
